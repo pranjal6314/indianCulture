@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+div {
+  display: block;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.menu {
+  position: fixed;
+  height: 100%;
+  width: 80px;
+  padding-top: 60px;
+  transition:width 1s;
+  overflow: hidden;
+  font-family: Arial;
+  z-index: 99;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.menu:hover {
+  width: 220px;
+  background-color: rgba(255,255,255,0.13);
+}
+
+.menuitem span {
+  position: absolute;
+  left:80px;
+  top:20px;
+  transition:color 1s;
+  color:rgba(255,255,255,0);
+}
+ 
+.menu:hover .menuitem  span {
+ color:rgba(255,255,255,1);
+}
+ 
+.menuitem {
+  position: relative;
+  padding: 20px;
+  transition:border .5s, background .2s;  
+}
+ 
+.menuitem:hover {
+  background: #34495e;
+  cursor: pointer;
+}
+
+.text:hover{  
+  border-left:20px solid #16a085;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+ .btn {
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  z-index: 100;
+  margin-left: -162px;
+  margin-top: -102px;
+
+}
+button {
+  font-size: 18px;
+  color: #080303;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: rgb(17, 1, 1);
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(137, 216, 19);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+a{
+  font-size: larger;
+  font-style: italic;
+  color: rgba(166, 5, 5, 0.8);
+  text-decoration: none;
+  
+  background-color: transparent;
+}
